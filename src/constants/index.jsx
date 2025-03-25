@@ -13,166 +13,185 @@ import user5 from "../assets/profile-pictures/user5.jpg";
 import user6 from "../assets/profile-pictures/user6.jpg";
 
 export const navItems = [
-  { label: "Features", href: "#" },
-  { label: "Workflow", href: "#" },
-  { label: "Pricing", href: "#" },
-  { label: "Testimonials", href: "#" },
+  { label: "About", href: "/about" },
+  { label: "ContatUs", href: "/contact" },
+  { label: "Pricing", href: "/price" },
+  { label: "Testimonials", href: "/testimonial" },
 ];
 
 export const testimonials = [
   {
-    user: "John Doe",
-    company: "Stellar Solutions",
+    user: "Dr. Rajesh Verma",
+    company: "CMR College of Hyderabad",
     image: user1,
-    text: "I am extremely satisfied with the services provided. The team was responsive, professional, and delivered results beyond my expectations.",
+    text: "This project is incredible and truly novel. Its accuracy in detecting deepfakes is impressive. It has the potential to revolutionize media verification and combat misinformation.",
   },
   {
-    user: "Jane Smith",
-    company: "Blue Horizon Technologies",
+    user: "Badagarvala",
+    company: "Badagarvala Startup",
     image: user2,
-    text: "I couldn't be happier with the outcome of our project. The team's creativity and problem-solving skills were instrumental in bringing our vision to life",
+    text: "I was amazed by the accuracy of this tool. Its multi-platform support makes it user-friendly, and the government reporting feature is a great initiative.",
   },
   {
-    user: "David Johnson",
-    company: "Quantum Innovations",
+    user: "Siddharam Sutar",
+    company: "Innovative AI Solutions",
     image: user3,
-    text: "Working with this company was a pleasure. Their attention to detail and commitment to excellence are commendable. I would highly recommend them to anyone looking for top-notch service.",
+    text: "This project stands out for its speed and accuracy in real-time fact-checking. Multi-language support makes it widely accessible.",
   },
   {
-    user: "Ronee Brown",
-    company: "Fusion Dynamics",
+    user: "Meera Patil",
+    company: "TechSecure Labs",
     image: user4,
-    text: "Working with the team at XYZ Company was a game-changer for our project. Their attention to detail and innovative solutions helped us achieve our goals faster than we thought possible. We are grateful for their expertise and professionalism!",
+    text: "Misinformation is a big issue, and this AI-powered solution adapts well to deepfake techniques. The government reporting system adds real-world impact.",
   },
   {
-    user: "Michael Wilson",
-    company: "Visionary Creations",
+    user: "Rohan Desai",
+    company: "Future Vision AI",
     image: user5,
-    text: "I am amazed by the level of professionalism and dedication shown by the team. They were able to exceed our expectations and deliver outstanding results.",
+    text: "This is a game-changer, not just for fake news detection but also for startups. The integration of ads makes it both impactful and sustainable.",
   },
   {
-    user: "Emily Davis",
-    company: "Synergy Systems",
+    user: "Ananya Sharma",
+    company: "Ethical AI Initiative",
     image: user6,
-    text: "The team went above and beyond to ensure our project was a success. Their expertise and dedication are unmatched. I look forward to working with them again in the future.",
+    text: "This system works amazingly well. A misinformation-free internet feels possible with its seamless support for multiple devices.",
   },
 ];
 
 export const features = [
   {
     icon: <BotMessageSquare />,
-    text: "Drag-and-Drop Interface",
+    text: "Fact Checker",
     description:
-      "Easily design and arrange your VR environments with a user-friendly drag-and-drop interface.",
+      "Detect fake news, manipulated photos, and",
+      image:'/src/assets/text.jpg',
+          route:'/news'
+
   },
   {
     icon: <Fingerprint />,
-    text: "Multi-Platform Compatibility",
+    text: "Image Inspector",
     description:
-      "Build VR applications that run seamlessly across multiple platforms, including mobile, desktop, and VR headsets.",
+      "Detect tampered or manipulated images",
+            image:'/src/assets/photo.jpg',
+          route:'/photos'
+
   },
-  {
-    icon: <ShieldHalf />,
-    text: "Built-in Templates",
-    description:
-      "Jumpstart your VR projects with a variety of built-in templates for different types of applications and environments.",
-  },
+ 
   {
     icon: <BatteryCharging />,
-    text: "Real-Time Preview",
+    text: "Deepfake Detector",
     description:
-      "Preview your VR application in real-time as you make changes, allowing for quick iterations and adjustments.",
+      "Identify and expose fake or altered videos",
+      ///src/assets/video.jpg
+     image:'/src/assets/video.jpg',
+          route:'/videos'
+
   },
   {
     icon: <PlugZap />,
-    text: "Collaboration Tools",
+    text: "Content Detector",
     description:
-      "Work together with your team in real-time on VR projects, enabling seamless collaboration and idea sharing.",
+      "Identify and expose fake or altered transcripts",
+           image:'/src/assets/transcript.jpg',
+          route:'/transcript'
+
   },
   {
     icon: <GlobeLock />,
-    text: "Analytics Dashboard",
+    text: "Social Media Detector",
     description:
-      "Gain valuable insights into user interactions and behavior within your VR applications with an integrated analytics dashboard.",
+      "Identify and expose fake or altered social media posts",
+      image:'/src/assets/media.jpg',
+          route:'/socialmedia'
+
+  },
+   {
+    icon: <ShieldHalf />,
+    text: "Community Support",
+    description:
+      "Jumpstart your VR projects with a variety of built-in templates for different types of applications and environments.",
+     image:'/src/assets/media.jpg',
+      route:'/community'
+
   },
 ];
 
 export const checklistItems = [
   {
-    title: "Code merge made easy",
+    title: "Spot Deepfakes Instantly",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Not sure if a photo or video is real? Our AI-powered tool helps you detect deepfakes with high accuracy, so you never fall for fake content again.",
   },
   {
-    title: "Review code without worry",
+    title: "Stopping Fake News, One Report at a Time",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Misinformation spreads fast, but we’re faster! Our app doesn’t just detect fake news—it reports it directly to the government, making the internet a safer place for everyone.",
   },
   {
-    title: "AI Assistance to reduce time",
+    title: "Speak Your Language, Stay Informed",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "No language barriers here! Our app works in multiple languages, ensuring everyone gets the right information, no matter where they’re from.",
   },
   {
-    title: "Share work in minutes",
+    title: "Works Everywhere—From Phones to Smartwatches",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Fake news and deepfakes don’t wait, so why should you? Our app runs on Android, iOS, desktops, and even smartwatches, keeping you protected at all times.",
   },
 ];
 
 export const pricingOptions = [
   {
-    title: "Free",
+    title: "Starter (Free Trial)",
     price: "$0",
     features: [
-      "Private board sharing",
-      "5 Gb Storage",
-      "Web Analytics",
-      "Private Mode",
+      "Run free ads for 7 days",
+      "Basic email marketing campaign",
+      "Limited audience reach",
+      "Ad placement in community section",
     ],
   },
   {
-    title: "Pro",
-    price: "$10",
+    title: "Growth",
+    price: "$49",
     features: [
-      "Private board sharing",
-      "10 Gb Storage",
-      "Web Analytics (Advance)",
-      "Private Mode",
+      "Run ads for 30 days",
+      "Targeted email campaigns",
+      "Featured in recommended businesses",
+      "Social media promotion",
+      "Priority ad placement in trending section",
     ],
   },
   {
     title: "Enterprise",
     price: "$200",
     features: [
-      "Private board sharing",
-      "Unlimited Storage",
-      "High Performance Network",
-      "Private Mode",
+      "Unlimited ad placements",
+      "Advanced audience targeting",
+      "Dedicated digital marketing strategy",
+      "Brand awareness campaigns",
+      "Premium positioning on our platform",
     ],
   },
+];export const resourcesLinks = [
+  { href: "#", text: "getting_started" }, // Change "Getting Started" to "getting_started"
+  { href: "#", text: "documentation" }, // Change "Documentation" to "documentation"
+  { href: "#", text: "tutorials" }, // Change "Tutorials" to "tutorials"
+  { href: "#", text: "api_reference" }, // Change "API Reference" to "api_reference"
+  { href: "#", text: "community_forums" }, // Change "Community Forums" to "community_forums"
 ];
-
-export const resourcesLinks = [
-  { href: "#", text: "Getting Started" },
-  { href: "#", text: "Documentation" },
-  { href: "#", text: "Tutorials" },
-  { href: "#", text: "API Reference" },
-  { href: "#", text: "Community Forums" },
-];
-
 export const platformLinks = [
-  { href: "#", text: "Features" },
-  { href: "#", text: "Supported Devices" },
-  { href: "#", text: "System Requirements" },
-  { href: "#", text: "Downloads" },
-  { href: "#", text: "Release Notes" },
+  { href: "#", text: "features" }, // Change "features" to "features"
+  { href: "#", text: "supported_devices" }, // Change "supported devices" to "supported_devices"
+  { href: "#", text: "system_requirements" }, // Change "system requirements" to "system_requirements"
+  { href: "#", text: "downloads" }, // Change "downloads" to "downloads"
+  { href: "#", text: "release_notes" }, // Change "release notes" to "release_notes"
 ];
 
 export const communityLinks = [
-  { href: "#", text: "Events" },
-  { href: "#", text: "Meetups" },
-  { href: "#", text: "Conferences" },
-  { href: "#", text: "Hackathons" },
-  { href: "#", text: "Jobs" },
+  { href: "#", text: "events" }, // Change "Events" to "events"
+  { href: "#", text: "meetups" }, // Change "Meetups" to "meetups"
+  { href: "#", text: "conferences" }, // Change "Conferences" to "conferences"
+  { href: "#", text: "hackathons" }, // Change "Hackathons" to "hackathons"
+  { href: "#", text: "jobs" }, // Change "Jobs" to "jobs"
 ];
