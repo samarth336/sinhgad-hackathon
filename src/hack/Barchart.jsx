@@ -1,62 +1,37 @@
-import React from "react";
-import { Doughnut } from "react-chartjs-2";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { useEffect } from 'react';
+import { PieChart, Pie, Cell, Legend, Tooltip } from 'recharts';
 
-// Register Chart.js components
-ChartJS.register(ArcElement, Tooltip, Legend);
-
-const Barchart = ({ data }) => {
-  const labels = data.map((item) => item.label);
-  const scores = data.map((item) => item.score);
-  const backgroundColors = data.map((item) =>
-    item.label === "Real" ? "rgba(34, 197, 94, 0.8)" : "rgba(300, 68, 68, 0.9)"
-  );
-  const borderColors = data.map((item) =>
-    item.label === "Real" ? "rgba(34, 197, 94, 1)" : "rgba(239, 68, 68, 1)"
-  );
-
-  const chartData = {
-    labels: labels,
-    datasets: [
-      {
-        data: scores,
-        backgroundColor: backgroundColors,
-        borderColor: borderColors,
-        borderWidth: 2,
-      },
-    ],
-  };
-
-  const options = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        position: "bottom",
-        labels: {
-          font: {
-            size: 14,
-            weight: "bold",
-          },
-          color: "#fff", // Set legend text color to white
-        },
-      },
-    },
-  };
-
+const Barchart = function ({ data }) {
+    useEffect(()=>{
+        console.log(data);
+        
+    },[]);
   return (
-    <div className="flex justify-center items-center h-screen bg-gradient-to-r from-gray-700 to-gray-900 text-white">
-      <div className="shadow-lg rounded-xl p-6 w-full max-w-sm bg-gray-800">
-        <h2 className="text-xl font-semibold mb-4 text-center">
-          Fake vs Real Distribution
-        </h2>
-        <div className="h-64">
-          <Doughnut data={chartData} options={options} />
-        </div>
-        <button className="mt-4 px-6 py-2 bg-orange-500 text-white font-semibold rounded-lg shadow-md hover:bg-orange-600 w-full">
-          Refresh
-        </button>
-      </div>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r  shadow-lg rounded-lg">
+      <h1 className="text-white text-3xl font-extrabold mb-3">Real vs Fake Data</h1>
+      <PieChart width={350} height={350}>
+        <Pie
+          data={data}
+          cx="50%"
+          cy="50%"
+          innerRadius={80}
+          outerRadius={120}
+          fill="#8884d8"
+          dataKey="score"
+          nameKey="label"
+          label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+        >
+          {data.map((entry, index) => (
+            <Cell
+              key={`cell-${index}`}
+              fill={entry.label === "Real" ? "#0aa132" : "#d91818"} // Green for Real, Red for Fake
+              className="transition-transform duration-300 hover:scale-110"
+            />
+          ))}
+        </Pie>
+        <Tooltip formatter={(_, __, payload) => payload[0]?.payload.label} />
+        <Legend />
+      </PieChart>
     </div>
   );
 };

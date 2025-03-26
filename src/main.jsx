@@ -18,6 +18,7 @@ import i18n from "./i18n";
 import { I18nextProvider } from "react-i18next";
 import Pricing from "./components/Pricing.jsx";
 import Testimonials from "./components/Testimonials.jsx";
+import Test from "./hack/Test.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <I18nextProvider i18n={i18n}>
@@ -34,7 +35,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 <Route path="/contact" element={<ContactUs />} />
 <Route path="/price" element={<div className="ml-40 mr-40 "><Pricing /></div>} />
                 <Route path="/community" element={<Commu />} />
-                <Route path="/testimonial" element={<Testimonials />} />
+                <Route path="/testimonial" element={<Test />} />
+                                <Route path="/test" element={<Test />} />
       </Routes>
       <Footer />
     </Router>

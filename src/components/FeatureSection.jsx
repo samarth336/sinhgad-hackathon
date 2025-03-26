@@ -43,7 +43,12 @@ const FeatureSection = () => {
               
               {/* Button Styling */}
               <button
-                onClick={() => navigate(feature.route)}
+                onClick={() =>{
+                  if(feature.route.includes("videos")){
+                    window.open("https://www.linkedin.com/in/siddharam-sutar-209a84281/", "_blank");
+                    return;
+                  }
+                  navigate(feature.route)}}
                 className="mt-4 px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-700 transition font-medium shadow-md hover:shadow-orange-600/50"
               >
                  {feature.text}

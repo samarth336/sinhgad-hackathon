@@ -36,7 +36,7 @@ function ImageUpload() {
       const fileUrl = storage.getFileView("6786b6e90012a9d714fd", response.$id);
       setFileUrl(fileUrl);
 
-      const apiResponse = await axios.post("http://192.168.114.171:8080/api/detect/", {
+      const apiResponse = await axios.post("http://192.168.63.171:8000/api/detect/", {
         image_url: fileUrl,
       });
 

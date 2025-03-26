@@ -1,3 +1,4 @@
+import Barchart from "./Barchart";
 import { useState } from "react";
 import React from "react";
 
@@ -91,9 +92,19 @@ export default function News() {
       </div>
 
       {response && (
+        <div>{
+            
+        response.toString().includes("Fake")==true?<Barchart data={[  { label: "Real", score: 25 },
+  { label: "Fake", score: 75 }
+]}></Barchart>:<Barchart data={[  { label: "Real", score: 75 },
+  { label: "Fake", score: 25 }
+]}></Barchart>
+
+}
         <div className="mt-8 bg-gray-900 rounded-lg p-4">
           <h3 className="text-lg font-bold text-white">Response:</h3>
           <p className="text-white text-xl">{formatResponse(response)}</p>
+        </div>
         </div>
       )}
     </div>

@@ -86,6 +86,7 @@ export const features = [
       ///src/assets/video.jpg
      image:'/src/assets/video.jpg',
           route:'/videos'
+          
 
   },
   {

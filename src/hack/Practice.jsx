@@ -33,7 +33,7 @@ const Practice = ({ imageurl }) => {
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center bg-gradient-to-r from-gray-700 to-gray-900 text-white">
       <h2 className="text-2xl font-bold mb-4">Fake vs Real Score</h2>
-      <BarChart data={backendData} />
+      <Barchart data={backendData} />
       <button className="mt-4 px-6 py-2 bg-orange-500 text-white font-semibold rounded-lg shadow-md hover:bg-orange-600">
         Refresh
       </button>
