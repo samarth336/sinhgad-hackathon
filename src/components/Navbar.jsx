@@ -1,34 +1,43 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "../assets/logo.png";
-import { navItems } from "../constants";
 import { useTranslation } from "react-i18next";
+import logo from "../assets/Factlogo copy.png";
+import { navItems } from "../constants";
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
   const { t, i18n } = useTranslation();
+  const currentPath = window.location.pathname; // Get current page route
 
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
-  
+
   const changeLanguage = (event) => {
     i18n.changeLanguage(event.target.value);
   };
-console.log(t("app_name"));
 
   return (
     <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
       <div className="container px-4 mx-auto relative lg:text-sm">
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
-            <img className="h-10 w-10 mr-2" src={logo} alt="Logo" />
-            <span className="text-xl tracking-tight">{t("app_name")}</span>
+            <a href="/">
+              <img className="h-15 w-10 mr-2 mb-3 inline-block" src={logo} alt="Logo" />
+              <span className="text-xl tracking-tight">{t("app_name")}</span>
+            </a>
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12">
             {navItems.map((item, index) => (
               <li key={index}>
-                <a href={item.href}>{t(item.label)}</a>
+                <a
+                  href={item.href}
+                  className={`relative pb-2 ${
+                    currentPath === item.href ? "border-b-2 border-blue-500" : ""
+                  }`}
+                >
+                  {t(item.label)}
+                </a>
               </li>
             ))}
           </ul>
@@ -36,7 +45,7 @@ console.log(t("app_name"));
             <select
               onChange={changeLanguage}
               value={i18n.language}
-              className="py-2 px-3 border rounded-md bg-neutral-900 text-white"
+              className="py-2 px-4 border rounded-md bg-neutral-900 text-white"
             >
               <option value="en">English</option>
               <option value="hi">हिन्दी</option>
@@ -44,7 +53,7 @@ console.log(t("app_name"));
             </select>
             <a
               href="#"
-              className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md"
+              className="bg-gradient-to-r from-[#0f7de6] to-[#c80f75] py-2 px-3 rounded-md"
             >
               {t("create_account")}
             </a>
@@ -60,14 +69,21 @@ console.log(t("app_name"));
             <ul>
               {navItems.map((item, index) => (
                 <li key={index} className="py-4">
-                  <a href={item.href}>{t(item.label)}</a>
+                  <a
+                    href={item.href}
+                    className={`${
+                      currentPath === item.href ? "border-b-2 border-blue-500" : ""
+                    }`}
+                  >
+                    {t(item.label)}
+                  </a>
                 </li>
               ))}
             </ul>
             <div className="flex space-x-6">
               <a
                 href="#"
-                className="py-2 px-3 rounded-md bg-gradient-to-r from-orange-500 to-orange-800"
+                className="py-2 px-3 rounded-md bg-gradient-to-r from-[#0f7de6] to-[#c80f75]"
               >
                 {t("create_account")}
               </a>

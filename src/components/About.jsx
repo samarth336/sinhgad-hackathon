@@ -52,7 +52,7 @@ export default function AboutUs() {
             )}
           </div>
           <button
-            className="bg-orange-600 text-white px-6 py-3 rounded-md hover:bg-orange-700 transition-colors"
+            className="bg-gradient-to-r from-[#0f7de6] to-[#c80f75]  text-white px-6 py-3 rounded-md hover:bg-orange-700 transition-colors"
             onClick={() => setShowMore(!showMore)}
           >
             {showMore ? "Show Less" : "Learn More"}

@@ -36,7 +36,7 @@ function ImageUpload() {
       const fileUrl = storage.getFileView("6786b6e90012a9d714fd", response.$id);
       setFileUrl(fileUrl);
 
-      const apiResponse = await axios.post("http://192.168.63.171:8000/api/detect/", {
+      const apiResponse = await axios.post("http://192.168.231.171:8000/api/detect/", {
         image_url: fileUrl,
       });
 
@@ -84,7 +84,7 @@ function ImageUpload() {
           <input {...getInputProps()} />
           <button
             type="button"
-            className="px-6 py-3 rounded-md bg-orange-600 text-white hover:bg-orange-700"
+            className="px-6 py-3 rounded-md bg-gradient-to-r from-[#0f7de6] to-[#c80f75] text-white hover:bg-orange-700"
           >
             Upload Image
           </button>
@@ -112,7 +112,7 @@ function ImageUpload() {
             />
             <button
               type="submit"
-              className="px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700"
+              className="px-4 py-2 bg-gradient-to-r from-[#0f7de6] to-[#c80f75] text-white rounded-md hover:bg-orange-700"
               disabled={!urlInput || isUploading}
             >
               Submit

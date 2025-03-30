@@ -10,14 +10,14 @@ const features = [
     description: "Detect and analyze Instagram chats for suspicious activities, including digital scams and illicit communications.",
     icon: "📷",
     image: instaImg,
-    route: "http://127.0.0.1:5000/analyze",
+    route: "http://192.168.231.72:5001/analyze",
   },
   {
     text: "WhatsApp Chat Detector",
     description: "Monitor WhatsApp chats to identify potential threats like drug trafficking and online fraud.",
     icon: "💬",
     image: WhatsappImage,
-    route: "http://127.0.0.1:5001/analyze",
+    route: "http://192.168.231.72:5000/analyze",
   }
 ];
 
@@ -39,10 +39,10 @@ const InstaWhat = function ChatDetectors() {
       <div className="flex flex-wrap gap-6 m-10 justify-center">
         {features.map((feature, index) => (
           <div key={index} className="p-3 w-80 sm:w-96">
-            <div className="flex flex-col items-center text-center bg-neutral-900 p-6 rounded-xl shadow-lg hover:shadow-orange-500/50 transition duration-300 transform hover:scale-105 h-auto sm:h-96 w-full">
-              <div className="flex h-12 w-12 mb-3 bg-orange-500 text-white justify-center items-center rounded-xl shadow-md">
+            <div className="flex flex-col items-center text-center bg-neutral-900 p-6 rounded-xl shadow-lg hover:shadow-[#0f7de6] transition duration-300 transform hover:scale-105 h-auto sm:h-96 w-full">
+              {/* <div className="flex h-12 w-12 mb-3 bg-orange-500 text-white justify-center items-center rounded-xl shadow-md">
                 {feature.icon}
-              </div>
+              </div> */}
               {feature.image && (
                 <img
                   src={feature.image}
@@ -64,7 +64,7 @@ const InstaWhat = function ChatDetectors() {
                     setStatus(data.status);
                   });
                 }}
-                className="mt-auto px-5 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-700 transition font-medium shadow-md hover:shadow-orange-600/50"
+                className="mt-auto px-5 py-3 bg-gradient-to-r from-[#0f7de6] to-[#c80f75] text-white rounded-lg hover:bg-orange-700 transition font-medium shadow-md "
               >
                 {feature.text}
               </button>

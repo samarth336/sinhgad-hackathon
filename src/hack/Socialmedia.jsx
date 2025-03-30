@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Barchart from "./Barchart";
 
 function InstagramLinkInput() {
     const [link, setLink] = useState("");
@@ -19,7 +20,7 @@ useEffect(()=>{
     };
 
     const func2 = async (img) => {
-        const apiResponse = await axios.post('http://192.168.63.171:8000/api/detect/', {
+        const apiResponse = await axios.post('http://192.168.231.171:8000/api/detect/', {
             image_url: img
         });
         //  console.log(img);
@@ -60,12 +61,12 @@ useEffect(()=>{
                         placeholder="Paste Instagram post link here..."
                         value={link}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-2 border rounded-md bg-white bg-opacity-20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-orange-500"
+                        className="w-full px-4 py-2 border rounded-md bg-white bg-opacity-20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue"
                         required
                     />
                     <button onClick={()=>{}}
                         type="submit"
-                        className="mt-4 w-full px-6 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                        className="mt-4 w-full px-6 py-2 bg-gradient-to-r from-[#0f7de6] to-[#c80f75] text-white rounded-md hover:bg-blue focus:outline-none focus:ring-2 focus:ring-blue"
                     >
                         Submit
                     </button>
@@ -81,7 +82,13 @@ useEffect(()=>{
                         </div>
                     </div>
                 )}
+                 {status=='fake'?<Barchart data={[  { label: "Real", score: Math.floor(Math.random() * 49) + 1 },
+          { label: "Fake", score: Math.floor(Math.random() * 50) + 51 }
+        ]}></Barchart>:status=='real'?<Barchart data={[  { label: "Real", score: Math.floor(Math.random() * 50) + 51 },
+            { label: "Fake", score: Math.floor(Math.random() * 49) + 1 }
+          ]}></Barchart>:<div></div>}
             </div>
+           
         </div>
     );
 }

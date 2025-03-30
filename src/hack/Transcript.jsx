@@ -94,14 +94,14 @@ const Transcript = () => {
       <div
         {...getRootProps()}
         className={`border-2 border-dashed rounded-lg p-12 ${
-          isDragActive ? 'border-orange-500 bg-orange-50' : 'border-gray-300'
+          isDragActive ? 'bg-gradient-to-r from-[#0f7de6] to-[#c80f75] bg-orange-50' : 'border-gray-300'
         }`}
       >
         <input {...getInputProps()} />
         <div className="text-center">
           <button
             type="button"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-[#0f7de6] to-[#c80f75] hover:bg-blue"
           >
             Upload Video
           </button>
@@ -112,7 +112,7 @@ const Transcript = () => {
       {/* Upload Progress */}
       {isUploading && (
         <div className="mt-4 text-center">
-          <div className="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-white bg-orange-500">
+          <div className="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-white bg-gradient-to-r from-[#0f7de6] to-[#c80f75]">
             <svg
               className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
               xmlns="http://www.w3.org/2000/svg"
@@ -139,13 +139,24 @@ const Transcript = () => {
         </div>
       )}
 
+
       {/* Result Section */}
-      {status && (
-        <div className="mt-8 border border-gray-200 rounded-lg p-4 bg-gray-800">
-          <h3 className="text-lg font-semibold mb-2">Analysis Result:</h3>
-          <p className="text-xl font-bold text-center">{status}</p>
-        </div>
-      )}
+{status && (
+  <div className="mt-8 border border-gray-200 rounded-lg p-4 bg-gray-800">
+    <h3 className="text-lg font-semibold mb-2">Analysis Result:</h3>
+    <p className="text-xl text-center ">
+      {status.split(" ").map((word, index) => (
+        <span
+          key={index}
+          className={word === "Fake" ? "text-red-500 font-bold" : ""}
+        >
+          {word}{" "}
+        </span>
+      ))}
+    </p>
+  </div>
+)}
+
     </div>
   );
 };

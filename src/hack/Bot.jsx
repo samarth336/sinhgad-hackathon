@@ -133,7 +133,7 @@ function Bot() {
           <div key={index} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div
               className={`p-4 max-w-[450px] rounded-lg shadow-md ${
-                message.sender === 'user' ? 'bg-orange-500 text-white' : 'bg-gray-700 text-gray-300'
+                message.sender === 'user' ? 'bg-bg-gradient-to-r from-[#0f7de6] to-[#c80f75] text-white' : 'bg-gray-700 text-gray-300'
               }`}
             >
               <p>{message.text}</p>
@@ -153,7 +153,7 @@ function Bot() {
             placeholder="Type your message..."
             className="flex-1 p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
           />
-          <button type="submit" className="bg-orange-600 text-white px-4 rounded-lg hover:bg-orange-700">
+          <button type="submit" className="bg-bg-gradient-to-r from-[#0f7de6] to-[#c80f75] text-white px-4 rounded-lg hover:bg-orange-700">
             Send
           </button>
         </form>
@@ -162,14 +162,14 @@ function Bot() {
           <button
             onClick={startListening}
             className={`flex-1 px-6 py-2 rounded-lg ${
-              listening ? 'bg-yellow-500' : 'bg-orange-600 hover:bg-orange-700'
+              listening ? 'bg-yellow-500' : 'bg-gradient-to-r from-[#0f7de6] to-[#c80f75] hover:bg-orange-700'
             } text-white`}
           >
             {listening ? '🎙 Listening...' : '🎤 Speak'}
           </button>
           <button
             onClick={stopSpeaking}
-            className="flex-1 px-6 py-2 rounded-lg bg-orange-600 hover:bg-orange-700 text-white"
+            className="flex-1 px-6 py-2 rounded-lg bg-gradient-to-r from-[#0f7de6] to-[#c80f75] hover:bg-orange-700 text-white"
           >
             🛑 Stop
           </button>

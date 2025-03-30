@@ -21,7 +21,7 @@ const HeroSection = () => {
       <div className="flex justify-center my-10">
         <a
   href="/community"
-  className="bg-gradient-to-r from-orange-500 to-orange-800 text-white font-semibold py-3 px-5 mx-3 rounded-md shadow-md transition-all duration-300 hover:from-orange-600 hover:to-orange-900 hover:shadow-lg"
+  className="bg-gradient-to-r from-[#0f7de6] to-[#c80f75] text-white font-semibold py-3 px-5 mx-3 rounded-md shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg"
 >
   {/* Explore Community */}
   {t("explore_community")}
@@ -30,7 +30,7 @@ const HeroSection = () => {
        <a
   href="/app.apk"
   download
-  className="bg-gradient-to-r from-orange-500 to-orange-800 text-white font-semibold py-3 px-5 mx-3 rounded-md shadow-md transition-all duration-300 hover:from-orange-600 hover:to-orange-900 hover:shadow-lg"
+  className="bg-gradient-to-r from-[#0f7de6] to-[#c80f75] text-white font-semibold py-3 px-5 mx-3 rounded-md shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg"
 >
   {t("downloads")}
 </a>
@@ -42,7 +42,7 @@ const HeroSection = () => {
           autoPlay
           loop
           muted
-          className="rounded-lg w-1/2 border border-orange-700 shadow-sm shadow-orange-400 mx-2 my-4"
+          className="rounded-lg w-1/2 border border-[#0f7de6] shadow-sm shadow-[#c80f75] mx-2 my-4"
         >
           <source src={video1} type="video/mp4" />
           Your browser does not support the video tag.
@@ -51,7 +51,7 @@ const HeroSection = () => {
           autoPlay
           loop
           muted
-          className="rounded-lg w-1/2 border border-orange-700 shadow-sm shadow-orange-400 mx-2 my-4"
+          className="rounded-lg w-1/2 border border-[#0f7de6] shadow-sm shadow-[#c80f75] mx-2 my-4"
         >
           <source src={video2} type="video/mp4" />
           Your browser does not support the video tag.

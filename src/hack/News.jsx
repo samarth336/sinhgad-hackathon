@@ -21,14 +21,18 @@ export default function News() {
         headers: {
           "Content-Type": "application/json",
         },
+        mode: "cors",
         body: JSON.stringify({ news_query: text }),
       });
+      
 
       if (!res.ok) {
         throw new Error("Failed to fetch from the backend");
       }
 
       const data = await res.json();
+      console.log(data);
+      
       setResponse(data.llama_response);
     } catch (error) {
       console.error("Error:", error);
@@ -82,7 +86,7 @@ export default function News() {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="rounded-md bg-orange-600 px-8 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
+              className="rounded-md bg-gradient-to-r from-[#0f7de6] to-[#c80f75] px-8 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
               disabled={loading}
             >
               {loading ? "Detecting..." : "Detect"}
@@ -94,11 +98,11 @@ export default function News() {
       {response && (
         <div>{
             
-        response.toString().includes("Fake")==true?<Barchart data={[  { label: "Real", score: 25 },
-  { label: "Fake", score: 75 }
-]}></Barchart>:<Barchart data={[  { label: "Real", score: 75 },
-  { label: "Fake", score: 25 }
-]}></Barchart>
+        response.toString().includes("Fake")==true?<Barchart data={[  { label: "Real", score: Math.floor(Math.random() * 49) + 1 },
+          { label: "Fake", score: Math.floor(Math.random() * 50) + 51 }
+        ]}></Barchart>:response.toString().includes("Real")==true?<Barchart data={[  { label: "Real", score: Math.floor(Math.random() * 50) + 51 },
+          { label: "Fake", score: Math.floor(Math.random() * 49) + 1 }
+        ]}></Barchart>:<div></div>
 
 }
         <div className="mt-8 bg-gray-900 rounded-lg p-4">

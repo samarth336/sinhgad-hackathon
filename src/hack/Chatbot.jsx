@@ -9,7 +9,7 @@ export default function Chatbot() {
     <div>
       {/* Chatbot Icon (Button) */}
       <motion.button 
-        className="fixed bottom-6 right-5 bg-orange-500 text-white p-3 rounded-full shadow-lg hover:bg-orange-600 transition"
+        className="fixed bottom-6 right-5 bg-blue-500 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:shadow-[0px_0px_10px_5px_white]"
         onClick={() => setIsOpen(!isOpen)}
         whileTap={{ scale: 0.9 }} // Scale button down on tap
       >
@@ -20,7 +20,7 @@ export default function Chatbot() {
       <AnimatePresence>
         {isOpen && (
           <motion.div 
-            className="fixed bottom-20 right-5 w-[591px] h-[518px] bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg rounded-lg text-white"
+            className="fixed bottom-20 right-5 w-[400px] h-[518px] bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg rounded-lg text-white"
             initial={{
               opacity: 0,
               scale: 0, // Starts from 0 size
@@ -55,7 +55,7 @@ export default function Chatbot() {
             <div className="absolute -bottom-[18px] right-[21px] w-0 h-0 border-l-[18px] border-l-transparent border-t-[18px] border-t-gray-900 border-r-[18px] border-r-transparent"></div>
 
             {/* Chatbot Header */}
-            <div className="bg-orange-600 p-4 flex justify-between items-center rounded-t-lg">
+            <div className="bg-blue-600 p-4 flex justify-between items-center rounded-t-lg">
               <motion.h2 
                 className="text-lg font-semibold"
                 initial={{ opacity: 0, y: -10 }}

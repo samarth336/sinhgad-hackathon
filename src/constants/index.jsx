@@ -13,8 +13,9 @@ import user5 from "../assets/profile-pictures/user5.jpg";
 import user6 from "../assets/profile-pictures/user6.jpg";
 
 export const navItems = [
+  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "ContatUs", href: "/contact" },
+  { label: "ContactUs", href: "/contact" },
   { label: "Pricing", href: "/price" },
   { label: "Testimonials", href: "/testimonial" },
 ];
@@ -63,7 +64,7 @@ export const features = [
     icon: <BotMessageSquare />,
     text: "Fact Checker",
     description:
-      "Detect fake news, manipulated photos, and",
+      "Detect fake or misleading text-based news articles",
       image:'/src/assets/text.jpg',
           route:'/news'
 
@@ -111,7 +112,7 @@ export const features = [
     icon: <ShieldHalf />,
     text: "Community Support",
     description:
-      "Jumpstart your VR projects with a variety of built-in templates for different types of applications and environments.",
+      "Jumpstart VR projects with built-in templates",
      image:'/src/assets/media.jpg',
       route:'/community'
 

@@ -1,43 +1,112 @@
 {
-    "About": "About",
-    "ContatUs": "Contact Us",
-    "Pricing": "Pricing",
-    "Testimonials": "Testimonials",
-    "sign_in": "Sign In",
-    "select_language": "Select Language",
-     "app_name": "FactShield",
-     "subtitle":"Shield for India",
-  "create_account": "Create an account",
-   "title": "AI-Powered Misinformation ",
-  "description": "Our AI-driven website and app help you spot fake news, edited images, and deepfake videos instantly. By using advanced language processing, image analysis, and video forensics, we verify content and uncover misinformation. Just upload any media, and we’ll check its credibility—making the digital world more transparent and trustworthy!",
+  "About": "About",
+  "ContactUs": "Contact Us",
+  "Pricing": "Pricing",
+  "Testimonials": "Monitoring",
+  "sign_in": "Sign In",
+  "select_language": "Select Language",
+
+  "app_name": "FactShield",
+  "create_account": "Create Account",
+  "subtitle": "Shield For India",
+  "title": "AI-Powered Misinformation",
+  "description": "Our AI-powered website and app help you instantly identify fake news, edited images, and deepfake videos. Using advanced language processing, image analysis, and video forensics, we verify content and expose misinformation. Simply upload any media, and we will check its authenticity—making the digital world more transparent and trustworthy!",
+
   "explore_community": "Explore Community",
-  "what_people_saying": "What People are saying",
+  "what_people_saying": "What People Are Saying",
+
   "resources": "Resources",
   "getting_started": "Getting Started",
   "documentation": "Documentation",
   "tutorials": "Tutorials",
   "api_reference": "API Reference",
   "community_forums": "Community Forums",
+
   "platform": "Platform",
   "features": "Features",
   "supported_devices": "Supported Devices",
   "system_requirements": "System Requirements",
   "downloads": "Downloads",
   "release_notes": "Release Notes",
+
   "community": "Community",
   "events": "Events",
   "meetups": "Meetups",
   "conferences": "Conferences",
   "hackathons": "Hackathons",
   "jobs": "Jobs",
-  "download_app": "Download App Now",
-  "easily_build_code": "Easily build your code",
+
+  "download_app": "Download the App Now",
+  "easily_build_code": "Easily Build Code",
+
   "fact_checker": "Fact Checker",
-  "detect_fake_news": "Detect fake news, manipulated photos, and",
+  "detect_fake_news": "Detect Fake News, Edited Photos, and Deepfakes",
+
   "content_detector": "Content Detector",
-  "identify_fake_transcripts": "Identify and expose fake or altered transcripts",
+  "identify_fake_transcripts": "Identify Fake or Altered Transcripts",
+
   "social_media_detector": "Social Media Detector",
-  "identify_fake_posts": "Identify and expose fake or altered social media posts",
+  "identify_fake_posts": "Identify Fake or Edited Social Media Posts",
+
   "community_support": "Community Support",
-  "pricing": "Pricing"
+  "community_support_description": "Kickstart your projects quickly with built-in templates for various applications and environments.",
+
+  "reviews": [
+    {
+      "name": "💬 Siddharam Sutar",
+      "title": "Innovative AI Solution",
+      "review": "This project is unique for real-time fact-checking speed and accuracy. Multi-language support makes it widely accessible."
+    }
+  ],
+
+  "coding": "Speed up your coding process.",
+  "spot_deepfakes": "Spot Deepfakes Instantly",
+  "spot_deepfakes_description": "Whether a photo or video is real or fake, our AI-powered tool helps identify it with high accuracy.",
+
+  "stop_fake_news": "Stop Fake News",
+  "stop_fake_news_description": "Misinformation spreads quickly, but we’re even faster! Our app not only detects fake news but also reports it directly to government authorities.",
+
+  "multi_language_support": "Get Information in Your Language",
+  "multi_language_support_description": "Our app works in multiple languages so that everyone can receive accurate information, no matter where they are from.",
+
+  "multi_device_support": "Works Everywhere",
+  "multi_device_support_description": "Fake news and deepfakes don’t wait, so why should you? Our app runs on Android, iOS, desktop, and even smartwatches.",
+
+  "pricing_plans": [
+    {
+      "name": "Starter (Free Trial)",
+      "price": "$0/month",
+      "features": [
+        "Free advertising for 7 days",
+        "Basic email marketing campaign",
+        "Limited audience reach",
+        "Ad placement in the community section"
+      ],
+      "button": "Subscribe"
+    },
+    {
+      "name": "Growth",
+      "price": "$49/month",
+      "features": [
+        "Advertising for 30 days",
+        "Targeted email campaigns",
+        "Feature in recommended businesses",
+        "Social media promotion",
+        "Priority in trending section"
+      ],
+      "button": "Subscribe"
+    },
+    {
+      "name": "Enterprise",
+      "price": "$200/month",
+      "features": [
+        "Unlimited ad placements",
+        "Advanced audience targeting",
+        "Dedicated digital marketing strategy",
+        "Brand awareness campaigns",
+        "Premium positioning on our platform"
+      ],
+      "button": "Subscribe"
+    }
+  ]
 }
